@@ -420,6 +420,16 @@ export const gluestackUIConfig = createConfig({
       backgroundDarkMuted: '#252526',
       white: '#FFFFFF',
       black: '#000000',
+      mygray700: '#121214',
+      mygray600: '#202024',
+      mygray500: '#29292E',
+      mygray400: '#323238',
+      mygray300: '#7C7C8A',
+      mygray200: '#C4C4CC',
+      mygray100: '#E1E1E6',
+      myred500: '#F75A68',
+      mygreen500: '#00B37E',
+      mygreen700: '#00875F',
     },
     space: {
       'px': '1px',
@@ -537,9 +547,9 @@ export const gluestackUIConfig = createConfig({
       extraBlack: '950',
     },
     fonts: {
-      heading: undefined,
-      body: undefined,
       mono: undefined,
+      heading: 'Roboto_700Bold',
+      body: 'Roboto_400Regular',
     },
     fontSizes: {
       '2xs': 10,
@@ -556,6 +566,10 @@ export const gluestackUIConfig = createConfig({
       '7xl': 72,
       '8xl': 96,
       '9xl': 128,
+    },
+    sizes: {
+      14: 56,
+      33: 148
     },
     opacity: {
       0: 0,
