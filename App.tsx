@@ -1,7 +1,8 @@
-import { useFonts, Roboto_400Regular, Roboto_700Bold } from '@expo-google-fonts/roboto';
 import { config } from '@gluestack-ui/config';
 import { GluestackUIProvider, Text, View } from '@gluestack-ui/themed';
 import { StatusBar } from 'react-native';
+import { useFonts, Roboto_400Regular, Roboto_700Bold } from '@expo-google-fonts/roboto';
+import { Loading } from '@components/Loading/Loading';
 
 export default function App() {
   const [fontsLoaded] = useFonts({ Roboto_400Regular, Roboto_700Bold});
@@ -14,9 +15,7 @@ export default function App() {
         translucent
       />
 
-      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: '#202024'}}>
-        { fontsLoaded ? <Text>Hello World!!</Text> : <View />}
-      </View>
+      <Loading />
     </GluestackUIProvider>
   );
 }
