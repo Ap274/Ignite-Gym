@@ -10,7 +10,7 @@ export function Input({message}: Props) {
             variant="outline"
             size="md"
             bg="$mygray700"
-            px={16}
+            px={10}
             borderWidth={0}
             mb={10}
             h={56}
@@ -25,6 +25,9 @@ export function Input({message}: Props) {
                 color='$white' 
                 fontFamily='$body'
                 placeholderTextColor="$mygray300"
+                keyboardType={ message === 'E-mail' ? 'email-address' : 'default' } 
+                secureTextEntry={message==='Senha'}
+                autoCapitalize={ message === "E-mail" ? 'none' : 'words'}
             />
         </GluestackInput>
     )

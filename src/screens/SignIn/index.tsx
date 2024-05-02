@@ -24,13 +24,17 @@ export function SignIn() {
                 </Text>        
             </Center>
 
-            <Center>
+            <Center px={25}>
                 <Heading color="$mygray100" fontSize="$xl" mb={24} fontFamily="$heading">
                     Acesse sua conta
                 </Heading>
 
-                <Input message="E-mail"/>
-                <Input message="Senha"/>
+                <Input 
+                    message="E-mail"
+                />
+                <Input 
+                    message="Senha"
+                />
             </Center>
         </VStack>
     )
