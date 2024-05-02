@@ -15,6 +15,9 @@ export function Input({message}: Props) {
             mb={10}
             h={56}
             mx={8}
+            $focus-bg='$mygray700'
+            $focus-borderWidth={1}
+            $focus-borderColor='$mygreen500'
         >
             <InputField 
                 placeholder={message}

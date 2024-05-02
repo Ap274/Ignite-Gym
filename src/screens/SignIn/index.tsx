@@ -25,7 +25,7 @@ export function SignIn() {
             </Center>
 
             <Center>
-                <Heading color="$mygray100" fontSize="$xl" mb={6} fontFamily="$heading">
+                <Heading color="$mygray100" fontSize="$xl" mb={24} fontFamily="$heading">
                     Acesse sua conta
                 </Heading>
 
