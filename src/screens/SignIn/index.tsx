@@ -1,6 +1,9 @@
-import { VStack, ImageBackground, Text, Center } from '@gluestack-ui/themed'
+import { VStack, ImageBackground, Text, Center, Heading } from '@gluestack-ui/themed'
+
 import LogoSvg from '@assets/logo.svg'
 import BackgroundImg from "@assets/background.png"
+
+import { Input } from '@components/Input'
 
 export function SignIn() {
     return (
@@ -19,6 +22,15 @@ export function SignIn() {
                 <Text color="$mygray100" fontSize="$sm">
                     Treine sua mente e o seu corpo    
                 </Text>        
+            </Center>
+
+            <Center>
+                <Heading color="$mygray100" fontSize="$xl" mb={6} fontFamily="$heading">
+                    Acesse sua conta
+                </Heading>
+
+                <Input message="E-mail"/>
+                <Input message="Senha"/>
             </Center>
         </VStack>
     )
