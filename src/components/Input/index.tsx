@@ -1,10 +1,10 @@
-import { Input as GluestackInput, InputField} from '@gluestack-ui/themed'
+import { Input as GluestackInput, InputField } from '@gluestack-ui/themed';
 
 type Props = {
     message: string;
 }
 
-export function Input({message}: Props) {
+export function Input({ message }: Props) {
     return ( 
         <GluestackInput
             variant="outline"
@@ -14,7 +14,6 @@ export function Input({message}: Props) {
             borderWidth={0}
             mb={10}
             h={56}
-            mx={8}
             $focus-bg='$mygray700'
             $focus-borderWidth={1}
             $focus-borderColor='$mygreen500'
@@ -25,10 +24,10 @@ export function Input({message}: Props) {
                 color='$white' 
                 fontFamily='$body'
                 placeholderTextColor="$mygray300"
-                keyboardType={ message === 'E-mail' ? 'email-address' : 'default' } 
-                secureTextEntry={message==='Senha'}
-                autoCapitalize={ message === "E-mail" ? 'none' : 'words'}
+                keyboardType={message === "E-mail" ? 'email-address' : 'default'} 
+                type={message === "Senha" ? 'password' : 'text'}
+                autoCapitalize={message === "E-mail" ? 'none' : 'words'}
             />
         </GluestackInput>
-    )
+    );
 }
