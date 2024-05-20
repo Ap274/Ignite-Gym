@@ -4,6 +4,7 @@ import LogoSvg from '@assets/logo.svg'
 import BackgroundImg from "@assets/background.png"
 
 import { Input } from '@components/Input'
+import { Button } from '@components/Button'
 
 export function SignIn() {
     return (
@@ -24,7 +25,7 @@ export function SignIn() {
                 </Text>        
             </Center>
 
-            <Center px={25}>
+            <Center px={28}>
                 <Heading color="$mygray100" fontSize="$xl" mb={24} fontFamily="$heading">
                     Acesse sua conta
                 </Heading>
@@ -34,6 +35,10 @@ export function SignIn() {
                 />
                 <Input 
                     message="Senha"
+                />
+
+                <Button 
+                    title="Acessar"
                 />
             </Center>
         </VStack>
