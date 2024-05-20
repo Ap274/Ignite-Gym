@@ -1,4 +1,4 @@
-import { VStack, ImageBackground, Text, Center, Heading } from '@gluestack-ui/themed'
+import { VStack, ImageBackground, Text, Center, Heading, ScrollView, SafeAreaView } from '@gluestack-ui/themed'
 
 import LogoSvg from '@assets/logo.svg'
 import BackgroundImg from "@assets/background.png"
@@ -8,46 +8,53 @@ import { Button } from '@components/Button'
 
 export function SignIn() {
     return (
-        <VStack flex={1} bg="$trueGray800">
-            <ImageBackground 
-                source={BackgroundImg}
-                alt="Pessoas treinando"
-                style={{ width: '100%', height: '100%' }}
-                resizeMode='stretch'
-                position='absolute'
-            />
+        <SafeAreaView style={{ flex: 1, backgroundColor: '#1F2937' }}>
+            <ScrollView contentContainerStyle={{flexGrow: 1}} showsVerticalScrollIndicator={false} bounces={false}>
+                <VStack flex={1} bg="$trueGray800" pb={64}>
+                    <ImageBackground 
+                        source={BackgroundImg}
+                        alt="Pessoas treinando"
+                        style={{ width: '100%', height: '100%' }}
+                        resizeMode='stretch'
+                        position='absolute'
+                        />
 
-            <Center my={96}>
-                <LogoSvg />
+                    <Center my={96}>
+                        <LogoSvg />
 
-                <Text color="$mygray100" fontSize="$sm">
-                    Treine sua mente e o seu corpo    
-                </Text>        
-            </Center>
+                        <Text color="$mygray100" fontSize="$sm">
+                            Treine sua mente e o seu corpo    
+                        </Text>        
+                    </Center>
 
-            <Center px={28}>
-                <Heading color="$mygray100" fontSize="$xl" mb={24} fontFamily="$heading">
-                    Acesse sua conta
-                </Heading>
+                    <Center px={28}>
+                        <Heading color="$mygray100" fontSize="$xl" mb={24} fontFamily="$heading">
+                            Acesse sua conta
+                        </Heading>
 
-                <Input 
-                    message="E-mail"
-                />
-                <Input 
-                    message="Senha"
-                />
+                        <Input 
+                            message="E-mail"
+                            />
+                        <Input 
+                            message="Senha"
+                        />
 
-                <Button 
-                    title="Acessar"
-                />
-            </Center>
+                        <Button 
+                            title="Acessar"
+                            />
+                    </Center>
 
-            <Center px={28}>
-                <Button 
-                    title="Criar Conta"
-                    variant='outline'
-                />
-            </Center>
-        </VStack>
+                    <Center px={28} mt={96}>
+                        <Text color="$mygray100" fontSize="$sm" mb={12} fontFamily='$body'>
+                            Ainda não tem acesso?
+                        </Text>
+                        <Button 
+                            title="Criar Conta"
+                            variant='outline'
+                            />
+                    </Center>
+                </VStack>
+            </ScrollView>
+        </SafeAreaView>
     )
 }
