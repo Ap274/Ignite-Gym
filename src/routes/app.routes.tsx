@@ -25,6 +25,8 @@ export function AppRoutes() {
         <Navigator screenOptions={{ 
             headerShown: false,
             tabBarShowLabel: false,
+            tabBarActiveTintColor: '#00B37E',
+            tabBarInactiveTintColor: '#C4C4CC',
         }}>
             <Screen 
                 name="home"
