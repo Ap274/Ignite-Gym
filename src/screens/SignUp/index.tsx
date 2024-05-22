@@ -1,3 +1,4 @@
+import { useNavigation } from '@react-navigation/native'
 import { VStack, ImageBackground, Text, Center, Heading, ScrollView, SafeAreaView } from '@gluestack-ui/themed'
 
 import LogoSvg from '@assets/logo.svg'
@@ -7,6 +8,12 @@ import { Input } from '@components/Input'
 import { Button } from '@components/Button'
 
 export function SignUp() {
+    const navigation = useNavigation();
+
+    function handleGoBack() {
+        navigation.goBack();
+    }
+
     return (
         <SafeAreaView style={{ flex: 1, backgroundColor: '#1F2937' }}>
             <ScrollView contentContainerStyle={{flexGrow: 1}} showsVerticalScrollIndicator={false} bounces={false}>
@@ -52,6 +59,7 @@ export function SignUp() {
                         <Button 
                             title="Voltar para o login"
                             variant='outline'
+                            onPress={handleGoBack}
                         />
                     </Center>
                 </VStack>

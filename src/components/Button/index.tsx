@@ -3,9 +3,10 @@ import { Button as ButtonGluestack, ButtonText } from '@gluestack-ui/themed'
 type Props = {
     title: string;
     variant?: 'solid' | 'outline';
+    onPress?: () => void;
 }
 
-export function Button({title, variant = 'solid'}: Props) { 
+export function Button({title, variant = 'solid', onPress}: Props) { 
     const isOutline = variant === 'outline';
 
     return (
@@ -19,6 +20,7 @@ export function Button({title, variant = 'solid'}: Props) {
             $active-bg={isOutline ? "$mygray500" : "$mygreen700"}
             isDisabled={false}
             isFocusVisible={false}
+            onPress={onPress}
         >
             <ButtonText
                 color={variant === 'outline' ? '$mygreen500' : "$white"} 
