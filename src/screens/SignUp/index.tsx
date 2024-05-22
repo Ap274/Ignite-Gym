@@ -20,6 +20,7 @@ export function SignUp() {
                 <VStack flex={1} bg="$trueGray800" pb={64}>
                     <ImageBackground 
                         source={BackgroundImg}
+                        defaultSource={BackgroundImg}
                         alt="Pessoas treinando"
                         style={{ width: '100%', height: '100%' }}
                         resizeMode='stretch'
