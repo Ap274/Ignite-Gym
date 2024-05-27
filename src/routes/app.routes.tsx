@@ -1,4 +1,6 @@
+import { Platform } from 'react-native';
 import { createBottomTabNavigator, BottomTabNavigationProp, } from '@react-navigation/bottom-tabs';
+import { config } from '../../config/gluestack-ui.config';
 
 import HomeSvg from '@assets/home.svg';
 import HistorySvg from '@assets/history.svg';
@@ -21,12 +23,21 @@ export type AppNavigatorRoutesProps = BottomTabNavigationProp<AppRoutes>;
 const { Navigator, Screen } = createBottomTabNavigator<AppRoutes>();
 
 export function AppRoutes() {
+    const { colors } = config.tokens;
+
     return (
         <Navigator screenOptions={{ 
             headerShown: false,
             tabBarShowLabel: false,
-            tabBarActiveTintColor: '#00B37E',
-            tabBarInactiveTintColor: '#C4C4CC',
+            tabBarActiveTintColor: colors.mygreen500,
+            tabBarInactiveTintColor: colors.mygray200,
+            tabBarStyle: {
+                backgroundColor: colors.mygray600,
+                borderTopWidth: 0,
+                height: Platform.OS === 'android' ? 'auto' : 96,
+                paddingBottom: 30,
+                paddingTop: 24,
+            }
         }}>
             <Screen 
                 name="home"
@@ -61,6 +72,7 @@ export function AppRoutes() {
             <Screen 
                 name="exercise"
                 component={Exercise}
+                options={{ tabBarButton: () => null}}
             />
         </Navigator>
     );
