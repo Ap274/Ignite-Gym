@@ -1,4 +1,6 @@
-import { HStack, VStack, Text, Heading } from "@gluestack-ui/themed";
+import { TouchableOpacity } from "react-native";
+import { HStack, VStack, Text, Heading, Icon } from "@gluestack-ui/themed";
+import { LogOut } from "lucide-react-native";
 
 import { UserPhoto } from "@components/UserPhoto";
 
@@ -21,6 +23,14 @@ export function HomeHeader() {
                     Aldo
                 </Heading>
             </VStack>
+
+            <TouchableOpacity>
+                <Icon 
+                    as={LogOut}
+                    color="$mygray200"
+                    size="xl"
+                />
+            </TouchableOpacity>
         </HStack>
     )
 }
