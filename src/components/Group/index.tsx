@@ -16,6 +16,8 @@ export function Group({ name, ...rest }: Props) {
             justifyContent="center"
             alignItems="center"
             overflow="hidden"
+            $active-borderColor="$mygreen500"
+            $active-borderWidth={1}
             {...rest}
         >
             <Text
