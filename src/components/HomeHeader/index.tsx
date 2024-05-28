@@ -14,7 +14,7 @@ export function HomeHeader() {
                 style={{ marginRight: 16 }}
             />
 
-            <VStack>
+            <VStack flex={1}>
                 <Text color="$mygray100" fontSize="$md">
                     Hello,
                 </Text>
