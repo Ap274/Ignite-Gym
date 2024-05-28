@@ -3,9 +3,10 @@ import { PressableProps } from "react-native";
 
 type Props = PressableProps & {
     name: string;
+    isActive: boolean;
 }
 
-export function Group({ name, ...rest }: Props) {
+export function Group({ name, isActive, ...rest }: Props) {
     return (
         <Pressable
             mr={12}
@@ -16,12 +17,12 @@ export function Group({ name, ...rest }: Props) {
             justifyContent="center"
             alignItems="center"
             overflow="hidden"
-            $active-borderColor="$mygreen500"
-            $active-borderWidth={1}
+            $active-borderColor={isActive ? "$mygreen500" : "transparent"}
+            $active-borderWidth={isActive ? 1 : "$0"}
             {...rest}
         >
             <Text
-                color="$mygray200"
+                color={isActive ? "$mygreen500" : "$mygray200"}
                 textTransform="uppercase"
                 fontSize="$xs"
                 fontWeight="$bold"
