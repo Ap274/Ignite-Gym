@@ -17,8 +17,8 @@ export function Group({ name, isActive, ...rest }: Props) {
             justifyContent="center"
             alignItems="center"
             overflow="hidden"
-            $active-borderColor={isActive ? "$mygreen500" : "transparent"}
-            $active-borderWidth={isActive ? 1 : "$0"}
+            borderColor={isActive ? "$mygreen500" : "transparent"}
+            borderWidth={isActive ? 1 : "$0"}
             {...rest}
         >
             <Text
